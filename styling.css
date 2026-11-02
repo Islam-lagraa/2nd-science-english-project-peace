@@ -1,0 +1,34 @@
+:root {
+  /* Change these values to resize images or recolor the hero. */
+  --project-image-height: 260px;
+  --hero-background: var(--bs-success);
+}
+
+.project-hero {
+  min-height: 380px;
+  background: var(--hero-background);
+}
+
+.project-image {
+  display: block;
+  width: 100%;
+  height: var(--project-image-height);
+  object-fit: cover;
+  border-radius: var(--bs-border-radius-lg);
+}
+
+.project-card {
+  position: relative;
+  transition: background-color .2s ease, transform .2s ease;
+}
+
+.project-card:hover,
+.project-card:focus-within {
+  background-color: var(--bs-success-bg-subtle);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 767.98px) {
+  :root { --project-image-height: 220px; }
+  .project-hero { min-height: 300px; }
+}
